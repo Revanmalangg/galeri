@@ -1,75 +1,102 @@
-# 📸 Galeri Foto Produk - UKK 2026
-[![Laravel Version](https://img.shields.io/badge/Laravel-11.x-red.svg)](https://laravel.com)
-[![PHP Version](https://img.shields.io/badge/PHP-8.2%2B-blue.svg)](https://php.net)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![School](https://img.shields.io/badge/SMKN_11-Malang-orange.svg)](https://smkn11malang.sch.id)
+# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Camera%20with%20Flash.png" alt="Camera" width="40" /> Galeri Foto Produk - UKK 2026
 
-Aplikasi Galeri Foto Produk adalah platform berbasis web untuk manajemen katalog produk digital. Dibangun dengan fokus pada kecepatan akses dan antarmuka **Minimalis**, aplikasi ini dirancang untuk memenuhi standar Uji Kompetensi Keahlian (UKK) Rekayasa Perangkat Lunak.
+<p align="left">
+  <img src="https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
+  <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" />
+</p>
 
----
-
-## 🎯 Fitur Sistem
-Aplikasi ini menerapkan sistem **Role-Based Access Control (RBAC)**:
-
-### 👤 Pengguna (User)
-- [x] **Registrasi & Login**: Keamanan akun dengan enkripsi Bcrypt.
-- [x] **Exploration**: Menjelajahi galeri produk terbaru.
-- [x] **Interaction**: Memberikan komentar pada setiap foto produk.
-- [x] **Self-Management**: Menghapus komentar milik sendiri.
-
-### 🛡️ Administrator (Admin)
-- [x] **Product Management**: Menambah, mengedit, dan menghapus foto produk.
-- [x] **Moderation**: Menghapus komentar yang tidak pantas dari pengguna manapun.
-- [x] **Storage Control**: Otomatis membersihkan file gambar lama saat data dihapus/diedit.
+> **Platform Manajemen Katalog Digital** yang dirancang dengan prinsip *Minimalist UI* untuk performa maksimal. Dikembangkan khusus untuk Uji Kompetensi Keahlian (UKK) SMKN 11 Malang.
 
 ---
 
-## 🏛️ Arsitektur & Database
+## 🚀 Fitur Unggulan
+<table border="0">
+ <tr>
+    <td><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Identification%20Card.png" width="25" /> <b>Multi-Role Auth</b></td>
+    <td>Sistem login berbeda antara Admin & Pengguna menggunakan enkripsi Bcrypt.</td>
+ </tr>
+ <tr>
+    <td><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Folder.png" width="25" /> <b>CRUD Expert</b></td>
+    <td>Manajemen file foto otomatis (hapus data = hapus file di storage).</td>
+ </tr>
+ <tr>
+    <td><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Chat%20Bubble.png" width="25" /> <b>Live Comment</b></td>
+    <td>Interaksi antar user pada setiap produk yang dipajang.</td>
+ </tr>
+</table>
 
-### Entity Relationship Diagram (ERD)
-Sistem ini menggunakan relasi database *One-to-Many* yang efisien.
+---
+
+## 🏛️ Arsitektur Database
+Sistem ini menggunakan relasi database yang dinormalisasi untuk menjaga integritas data.
 
 
 
-### Struktur Tabel (Data Dictionary)
-
-| Nama Tabel | Deskripsi | Kolom Utama | Tipe Data |
+### 📊 Data Dictionary
+| Tabel | Primary Key | Foreign Key | Fungsi |
 | :--- | :--- | :--- | :--- |
-| `users` | Akun pengguna | `id`, `name`, `email`, `password`, `role` | PK, String, String, String, Enum |
-| `photos` | Katalog produk | `id`, `judul`, `image_path`, `deskripsi`, `user_id` | PK, String, String, Text, FK |
-| `comments` | Diskusi produk | `id`, `content`, `photo_id`, `user_id` | PK, Text, FK, FK |
-
-
+| `users` | `id` | - | Autentikasi & Role |
+| `photos` | `id` | `user_id` | Katalog Produk |
+| `comments` | `id` | `photo_id`, `user_id` | Interaksi User |
 
 ---
 
-## 🖼️ Dokumentasi Antarmuka (Output)
+## 🖼️ Dokumentasi Visual (Output)
 
-> **Catatan:** Tampilan menggunakan tema **Minimalist Design** untuk meningkatkan User Experience (UX).
+### 🔐 Autentikasi
+Pintu masuk sistem dengan validasi keamanan tingkat tinggi.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/46c90775-83fc-4eea-b515-cb0cff771b66" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+</p>
 
-| Halaman | Deskripsi Visual |
-| :--- | :--- |
-| **Login & Register** | Form bersih tanpa card/shadow untuk kecepatan load. |
-| **Dashboard** | Grid sistem responsif (4 kolom desktop, 2 kolom mobile). |
-| **Detail Foto** | Preview gambar resolusi tinggi dengan panel komentar di sisi kanan. |
-| **Admin Panel** | Formulir input dengan validasi tipe file (JPG, PNG, JPEG). |
+### 📱 Antarmuka Utama (User & Admin)
+Perbandingan layout dashboard yang bersih dan responsif.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b62862f5-fb75-4c1d-8489-cd891b2a085d" width="400" />
+  <img src="https://github.com/user-attachments/assets/6501d916-915a-4f2d-8826-f1b74ce2477d" width="400" />
+</p>
 
-
+### 🛠️ Panel Manajemen (Admin Only)
+Kontrol penuh bagi administrator untuk mengelola konten galeri.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/faec19dc-c146-4b7c-a8b5-d431e7b93169" width="260" />
+  <img src="https://github.com/user-attachments/assets/3bf271cd-db93-4eea-9942-603044b8f0f8" width="260" />
+  <img src="https://github.com/user-attachments/assets/0a5a5df7-354b-4bd7-9f03-dfad669ef364" width="260" />
+</p>
 
 ---
 
-## 🛠️ Stack Teknologi
-- **Backend:** PHP 8.2 & Laravel 11.x
-- **Frontend:** Bootstrap 5 (Custom Spacing)
-- **Database:** MySQL / MariaDB
-- **Tools:** Git, Composer, Artisan Tinker
+## ⚙️ Instalasi Cepat
+Cukup 4 langkah untuk menjalankan aplikasi di komputer lokal:
 
----
+```bash
+# 1. Clone Repositori
+git clone [https://github.com/Revanmalangg/galeri.git](https://github.com/Revanmalangg/galeri.git) && cd galeri
 
-## ⚙️ Petunjuk Instalasi
+# 2. Persiapan Environment
+composer install && cp .env.example .env && php artisan key:generate
 
-1. **Clone & Install**
-   ```bash
-   git clone [https://github.com/Revanmalangg/galeri.git](https://github.com/Revanmalangg/galeri.git)
-   cd galeri
-   composer install
+# 3. Migrasi Database
+php artisan migrate && php artisan storage:link
+
+# 4. Jalankan Aplikasi
+php artisan serve
+👨‍💻 Informasi Pengembang
+<p align="left">
+<strong>Nama:</strong> Revan Muhammad
+
+
+<strong>Sekolah:</strong> SMKN 11 Malang
+
+
+<strong>Jurusan:</strong> Rekayasa Perangkat Lunak
+
+
+<strong>Tujuan:</strong> Proyek Final UKK 2026
+</p>
+
+<p align="center">
+<img src="https://www.google.com/search?q=https://capsule-render.vercel.app/api%3Ftype%3Dwaving%26color%3Dauto%26height%3D120%26section%3Dfooter" width="100%" />
+</p>
