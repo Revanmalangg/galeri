@@ -12,19 +12,21 @@
 ---
 
 ## 🚀 Fitur Unggulan
-<table border="0">
-
- <tr>
-    <td><img width="480" height="490" alt="Screenshot 2026-03-10 074207" src="https://github.com/user-attachments/assets/0ca55280-6aed-45f2-a99c-a64be3b8081a" />
- <b>CRUD Expert</b></td>
-    <td>Struktur Database</td>
- </tr>
-</table>
+Aplikasi ini menerapkan sistem **Role-Based Access Control (RBAC)** dengan fitur:
+- [x] **Multi-Role Auth**: Login berbeda untuk Admin & User.
+- [x] **CRUD Expert**: Manajemen foto produk lengkap dengan hapus otomatis file di storage.
+- [x] **Interaction**: Sistem komentar antar pengguna pada setiap produk.
 
 ---
 
-## 🏛️ Arsitektur Database
+## 🏛️ Arsitektur & Database
+
+### Struktur Relasi (ERD)
 Sistem ini menggunakan relasi database yang dinormalisasi untuk menjaga integritas data.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0ca55280-6aed-45f2-a99c-a64be3b8081a" width="600" style="border-radius: 8px; border: 1px solid #ddd;" />
+</p>
 
 
 
@@ -40,24 +42,24 @@ Sistem ini menggunakan relasi database yang dinormalisasi untuk menjaga integrit
 ## 🖼️ Dokumentasi Visual (Output)
 
 ### 🔐 Autentikasi
-Pintu masuk sistem dengan validasi keamanan tingkat tinggi.
+Antarmuka Login dan Register yang bersih dan simpel.
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/46c90775-83fc-4eea-b515-cb0cff771b66" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+  <img src="https://github.com/user-attachments/assets/46c90775-83fc-4eea-b515-cb0cff771b66" width="800" />
 </p>
 
-### 📱 Antarmuka Utama (User & Admin)
-Perbandingan layout dashboard yang bersih dan responsif.
+### 📱 Dashboard (User & Admin)
+Grid produk yang responsif untuk berbagai ukuran layar.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b62862f5-fb75-4c1d-8489-cd891b2a085d" width="400" />
   <img src="https://github.com/user-attachments/assets/6501d916-915a-4f2d-8826-f1b74ce2477d" width="400" />
 </p>
 
-### 🛠️ Panel Manajemen (Admin Only)
+### 🛠️ Panel Manajemen & Form (Admin Only)
 Kontrol penuh bagi administrator untuk mengelola konten galeri.
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/faec19dc-c146-4b7c-a8b5-d431e7b93169" width="260" />
-  <img src="https://github.com/user-attachments/assets/3bf271cd-db93-4eea-9942-603044b8f0f8" width="260" />
-  <img src="https://github.com/user-attachments/assets/0a5a5df7-354b-4bd7-9f03-dfad669ef364" width="260" />
+  <img src="https://github.com/user-attachments/assets/faec19dc-c146-4b7c-a8b5-d431e7b93169" width="270" />
+  <img src="https://github.com/user-attachments/assets/3bf271cd-db93-4eea-9942-603044b8f0f8" width="270" />
+  <img src="https://github.com/user-attachments/assets/0a5a5df7-354b-4bd7-9f03-dfad669ef364" width="270" />
 </p>
 
 ---
@@ -72,7 +74,7 @@ git clone [https://github.com/Revanmalangg/galeri.git](https://github.com/Revanm
 # 2. Persiapan Environment
 composer install && cp .env.example .env && php artisan key:generate
 
-# 3. Migrasi Database
+# 3. Migrasi Database & Storage
 php artisan migrate && php artisan storage:link
 
 # 4. Jalankan Aplikasi
