@@ -13,17 +13,11 @@
 
 ## 🚀 Fitur Unggulan
 <table border="0">
+
  <tr>
-    <td><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Identification%20Card.png" width="25" /> <b>Multi-Role Auth</b></td>
-    <td>Sistem login berbeda antara Admin & Pengguna menggunakan enkripsi Bcrypt.</td>
- </tr>
- <tr>
-    <td><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Folder.png" width="25" /> <b>CRUD Expert</b></td>
-    <td>Manajemen file foto otomatis (hapus data = hapus file di storage).</td>
- </tr>
- <tr>
-    <td><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Chat%20Bubble.png" width="25" /> <b>Live Comment</b></td>
-    <td>Interaksi antar user pada setiap produk yang dipajang.</td>
+    <td><img width="480" height="490" alt="Screenshot 2026-03-10 074207" src="https://github.com/user-attachments/assets/0ca55280-6aed-45f2-a99c-a64be3b8081a" />
+ <b>CRUD Expert</b></td>
+    <td>Struktur Database</td>
  </tr>
 </table>
 
@@ -83,20 +77,3 @@ php artisan migrate && php artisan storage:link
 
 # 4. Jalankan Aplikasi
 php artisan serve
-👨‍💻 Informasi Pengembang
-<p align="left">
-<strong>Nama:</strong> Revan Muhammad
-
-
-<strong>Sekolah:</strong> SMKN 11 Malang
-
-
-<strong>Jurusan:</strong> Rekayasa Perangkat Lunak
-
-
-<strong>Tujuan:</strong> Proyek Final UKK 2026
-</p>
-
-<p align="center">
-<img src="https://www.google.com/search?q=https://capsule-render.vercel.app/api%3Ftype%3Dwaving%26color%3Dauto%26height%3D120%26section%3Dfooter" width="100%" />
-</p>
